@@ -54,6 +54,18 @@ x = hi
     (identifier)
     (identifier)))
 ==========
+single-line groovydoc
+==========
+/** The maximum number of retries before giving up */
+class Foo {}
+---
+(source_file
+  (groovy_doc
+    (first_line))
+  (class_definition
+    name: (identifier)
+    body: (closure)))
+==========
 groovydoc with @TEXT
 ==========
 /**

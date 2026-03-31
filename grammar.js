@@ -251,16 +251,12 @@ module.exports = grammar({
     ),
 
     groovy_doc: $ =>
-      // seq('/**', /[^*]*\*+([^/*][^*]*\*+)*\//),
       seq(
         '/**',
-        // optional(
-          token.immediate(/[*\n\s]+/),
-          alias(token.immediate(/[^\n\.]+[\.]?/), $.first_line),
-        // ),
+        token.immediate(/[*\n\s]+/),
+        alias(token.immediate(/([^\n*.]|\*[^\/]|\.)+[\.]?/), $.first_line),
         repeat(
           choice(
-            // /[^*\s]*(\*[^/][^*\s]+)*/
             $.groovy_doc_param,
             $.groovy_doc_throws,
             $.groovy_doc_tag,
