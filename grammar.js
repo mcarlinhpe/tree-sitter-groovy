@@ -219,6 +219,10 @@ module.exports = grammar({
         'extends',
         field('superclass', $._primary_expression),
       )),
+      optional(seq(
+        'implements',
+        field('interfaces', list_of($._primary_expression)),
+      )),
       field('body', $.closure),
     ),
 
@@ -391,8 +395,9 @@ module.exports = grammar({
     for_in_loop: $ => prec(1, seq(
       'for',
       '(',
+      optional(choice('def', $._type)),
       field('variable', $.identifier),
-      'in',
+      choice('in', ':'),
       field('collection', $._expression),
       ')',
       field('body', choice(
@@ -770,7 +775,10 @@ module.exports = grammar({
     ),
 
     //TODO diamond operator
-    type_with_generics: $ => seq($._type, $.generics),
+    type_with_generics: $ => prec(2, seq(
+      choice($.identifier, $._type_identifier),
+      $.generics,
+    )),
 
     generics: $ => seq('<', list_of($._type), '>'),
 

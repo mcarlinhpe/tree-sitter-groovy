@@ -63,3 +63,16 @@ interface foo {
           (parameter
             type: (builtintype)
             name: (identifier)))))))
+==========
+class with implements
+==========
+class Foo extends Bar implements Baz, Qux {
+}
+---
+(source_file
+  (class_definition
+    name: (identifier)
+    superclass: (identifier)
+    interfaces: (identifier)
+    interfaces: (identifier)
+    body: (closure)))

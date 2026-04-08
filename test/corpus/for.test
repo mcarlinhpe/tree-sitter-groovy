@@ -112,3 +112,18 @@ for (x in 1..5) {
         args: (argument_list
           (string
             (string_content)))))))
+==========
+for-in loop with def
+==========
+for (def item : items) {
+  x = item
+}
+---
+(source_file
+  (for_in_loop
+    variable: (identifier)
+    collection: (identifier)
+    body: (closure
+      (assignment
+        (identifier)
+        (identifier)))))
