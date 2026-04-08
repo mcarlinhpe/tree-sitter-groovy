@@ -93,3 +93,19 @@ x = 1
   (assignment
     (identifier)
     (number_literal)))
+
+==========
+groovydoc with bold markers in content
+==========
+/**
+ * Pick server **DONE**
+ * Verify ILO **DONE**
+ */
+x = 1
+---
+(source_file
+  (groovy_doc
+    (first_line))
+  (assignment
+    (identifier)
+    (number_literal)))
