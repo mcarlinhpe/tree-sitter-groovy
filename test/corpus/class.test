@@ -76,3 +76,27 @@ class Foo extends Bar implements Baz, Qux {
     interfaces: (identifier)
     interfaces: (identifier)
     body: (closure)))
+==========
+constructor definition
+==========
+class Foo {
+  Foo(String x) {
+    this.x = x
+  }
+}
+---
+(source_file
+  (class_definition
+    name: (identifier)
+    body: (closure
+      (constructor_definition
+        name: (identifier)
+        parameters: (parameter_list
+          (parameter
+            type: (identifier)
+            name: (identifier)))
+        body: (closure
+          (assignment
+            (dotted_identifier
+              (identifier))
+            (identifier)))))))

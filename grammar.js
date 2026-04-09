@@ -69,6 +69,7 @@ module.exports = grammar({
         $.function_call,
         $.function_declaration,
         $.function_definition,
+        $.constructor_definition,
         $.if_statement,
         $.juxt_function_call,
         // $.pipeline_step_with_block,
@@ -459,6 +460,15 @@ module.exports = grammar({
       optional(field('type', choice($._type, 'def'))),
       field('name', $.identifier),
       optional(seq('=', field('value', $._expression))),
+    )),
+
+    constructor_definition: $ => prec(4, seq(
+      repeat($.annotation),
+      optional($.access_modifier),
+      repeat($.modifier),
+      field('name', $._type_identifier),
+      field('parameters', $.parameter_list),
+      field('body', $.closure),
     )),
 
     function_declaration: $ => prec(2, seq(

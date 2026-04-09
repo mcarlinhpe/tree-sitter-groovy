@@ -773,6 +773,10 @@
           "named": true
         },
         {
+          "type": "constructor_definition",
+          "named": true
+        },
+        {
           "type": "continue",
           "named": true
         },
@@ -1102,6 +1106,10 @@
           "named": true
         },
         {
+          "type": "constructor_definition",
+          "named": true
+        },
+        {
           "type": "continue",
           "named": true
         },
@@ -1237,6 +1245,60 @@
     "named": true,
     "extra": true,
     "fields": {}
+  },
+  {
+    "type": "constructor_definition",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "closure",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "parameters": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "parameter_list",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "access_modifier",
+          "named": true
+        },
+        {
+          "type": "annotation",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "declaration",
@@ -1430,6 +1492,10 @@
           },
           {
             "type": "closure",
+            "named": true
+          },
+          {
+            "type": "constructor_definition",
             "named": true
           },
           {
@@ -1675,6 +1741,10 @@
           },
           {
             "type": "closure",
+            "named": true
+          },
+          {
+            "type": "constructor_definition",
             "named": true
           },
           {
@@ -1980,6 +2050,10 @@
             "named": true
           },
           {
+            "type": "constructor_definition",
+            "named": true
+          },
+          {
             "type": "continue",
             "named": true
           },
@@ -2261,6 +2335,10 @@
           },
           {
             "type": "closure",
+            "named": true
+          },
+          {
+            "type": "constructor_definition",
             "named": true
           },
           {
@@ -2867,6 +2945,10 @@
             "named": true
           },
           {
+            "type": "constructor_definition",
+            "named": true
+          },
+          {
             "type": "continue",
             "named": true
           },
@@ -3048,6 +3130,10 @@
           },
           {
             "type": "closure",
+            "named": true
+          },
+          {
+            "type": "constructor_definition",
             "named": true
           },
           {
@@ -4273,6 +4359,10 @@
           "named": true
         },
         {
+          "type": "constructor_definition",
+          "named": true
+        },
+        {
           "type": "continue",
           "named": true
         },
@@ -4800,6 +4890,10 @@
             "named": true
           },
           {
+            "type": "constructor_definition",
+            "named": true
+          },
+          {
             "type": "continue",
             "named": true
           },
@@ -5201,6 +5295,10 @@
           },
           {
             "type": "closure",
+            "named": true
+          },
+          {
+            "type": "constructor_definition",
             "named": true
           },
           {
