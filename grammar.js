@@ -324,6 +324,15 @@ module.exports = grammar({
           ")"),
       )),
 
+    lambda_expression: $ => prec.right(-2, seq(
+      field('params', choice(
+        $.identifier,
+        $.parameter_list,
+      )),
+      '->',
+      field('body', choice($._expression, $.closure)),
+    )),
+
     _expression: $ => prec(1, choice(
       $._primary_expression,
       $.increment_op,
@@ -332,6 +341,7 @@ module.exports = grammar({
       $.unary_op,
       $.access_op,
       $.new_object,
+      $.lambda_expression,
       $.closure,
       alias("null", $.null),
     )),

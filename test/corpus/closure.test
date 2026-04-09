@@ -83,3 +83,21 @@ def myClosure = {
             (binary_op
               (identifier)
               (identifier))))))
+==========
+lambda expression as argument
+==========
+x = items.collect(item -> item.name)
+---
+(source_file
+  (assignment
+    (identifier)
+    (function_call
+      function: (dotted_identifier
+        (identifier)
+        (identifier))
+      args: (argument_list
+        (lambda_expression
+          params: (identifier)
+          body: (dotted_identifier
+            (identifier)
+            (identifier)))))))
