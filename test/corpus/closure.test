@@ -101,3 +101,17 @@ x = items.collect(item -> item.name)
           body: (dotted_identifier
             (identifier)
             (identifier)))))))
+==========
+method chaining after closure
+==========
+x = { it.value }.value
+---
+(source_file
+  (assignment
+    (identifier)
+    (dotted_identifier
+      (closure
+        (dotted_identifier
+          (identifier)
+          (identifier)))
+      (identifier))))

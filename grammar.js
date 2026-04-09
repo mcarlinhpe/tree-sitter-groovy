@@ -108,7 +108,7 @@ module.exports = grammar({
 
     dotted_identifier: $ =>
       prec.left(1, seq(
-        choice($._primary_expression, $._type_identifier),
+        choice($._primary_expression, $._type_identifier, $.closure),
         repeat1(seq(
         '.',
         choice(

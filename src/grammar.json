@@ -348,6 +348,10 @@
               {
                 "type": "SYMBOL",
                 "name": "_type_identifier"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "closure"
               }
             ]
           },
