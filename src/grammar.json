@@ -603,6 +603,10 @@
                   {
                     "type": "SYMBOL",
                     "name": "parenthesized_expression"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "access_op"
                   }
                 ]
               },

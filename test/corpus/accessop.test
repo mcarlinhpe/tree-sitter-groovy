@@ -11,3 +11,29 @@ x.y.z()
         (identifier))
       (identifier))
     args: (argument_list)))
+==========
+field assignment via .@
+==========
+class Foo {
+  def bar() {
+    this.@x = 1
+    this.@y = 2
+  }
+}
+---
+(source_file
+  (class_definition
+    name: (identifier)
+    body: (closure
+      (function_definition
+        function: (identifier)
+        parameters: (parameter_list)
+        body: (closure
+          (assignment
+            (access_op
+              (identifier))
+            (number_literal))
+          (assignment
+            (access_op
+              (identifier))
+            (number_literal)))))))

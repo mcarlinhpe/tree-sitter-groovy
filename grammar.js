@@ -148,7 +148,7 @@ module.exports = grammar({
 
     assignment: $ => prec(-1, choice( //??? is -1 ok here? (fixes conflict with expression for ++)
       seq(
-        choice($._juxtable_expression, $.parenthesized_expression),
+        choice($._juxtable_expression, $.parenthesized_expression, $.access_op),
         choice('=', '**=', '*=', '/=', '%=', '+=', '-=',
           '<<=', '>>=', '>>>=', '&=', '^=', '|=', '?='),
         $._expression
