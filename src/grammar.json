@@ -332,6 +332,45 @@
         }
       ]
     },
+    "method_reference": {
+      "type": "PREC_LEFT",
+      "value": 16,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_primary_expression"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_type_identifier"
+              }
+            ]
+          },
+          {
+            "type": "STRING",
+            "value": "::"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "identifier"
+              },
+              {
+                "type": "STRING",
+                "value": "new"
+              }
+            ]
+          }
+        ]
+      }
+    },
     "dotted_identifier": {
       "type": "PREC_LEFT",
       "value": 1,
@@ -2307,6 +2346,10 @@
           {
             "type": "SYMBOL",
             "name": "closure"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "method_reference"
           },
           {
             "type": "ALIAS",

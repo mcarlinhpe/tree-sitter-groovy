@@ -107,6 +107,12 @@ module.exports = grammar({
         ),
       ),
 
+    method_reference: $ => prec.left(PREC.TOP, seq(
+      choice($._primary_expression, $._type_identifier),
+      '::',
+      choice($.identifier, 'new'),
+    )),
+
     dotted_identifier: $ =>
       prec.left(1, seq(
         choice($._primary_expression, $._type_identifier, $.closure),
@@ -350,6 +356,7 @@ module.exports = grammar({
       $.access_op,
       $.lambda_expression,
       $.closure,
+      $.method_reference,
       alias("null", $.null),
     )),
 

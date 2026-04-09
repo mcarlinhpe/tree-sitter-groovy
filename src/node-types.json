@@ -65,6 +65,10 @@
           "named": true
         },
         {
+          "type": "method_reference",
+          "named": true
+        },
+        {
           "type": "new_object",
           "named": true
         },
@@ -176,6 +180,10 @@
         },
         {
           "type": "map_item",
+          "named": true
+        },
+        {
+          "type": "method_reference",
           "named": true
         },
         {
@@ -319,6 +327,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -415,6 +427,10 @@
           "named": true
         },
         {
+          "type": "method_reference",
+          "named": true
+        },
+        {
           "type": "new_object",
           "named": true
         },
@@ -506,6 +522,10 @@
           "named": true
         },
         {
+          "type": "method_reference",
+          "named": true
+        },
+        {
           "type": "new_object",
           "named": true
         },
@@ -594,6 +614,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "method_reference",
           "named": true
         },
         {
@@ -695,6 +719,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "method_reference",
             "named": true
           },
           {
@@ -854,6 +882,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "method_reference",
           "named": true
         },
         {
@@ -1142,6 +1174,10 @@
           "named": true
         },
         {
+          "type": "method_reference",
+          "named": true
+        },
+        {
           "type": "new_object",
           "named": true
         },
@@ -1345,6 +1381,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -1528,6 +1568,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "method_reference",
             "named": true
           },
           {
@@ -1788,6 +1832,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -1891,6 +1939,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "method_reference",
             "named": true
           },
           {
@@ -2094,6 +2146,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -2213,6 +2269,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "method_reference",
             "named": true
           },
           {
@@ -2379,6 +2439,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "method_reference",
             "named": true
           },
           {
@@ -3003,6 +3067,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -3191,6 +3259,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -3358,6 +3430,10 @@
           "named": true
         },
         {
+          "type": "method_reference",
+          "named": true
+        },
+        {
           "type": "new_object",
           "named": true
         },
@@ -3446,6 +3522,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "method_reference",
           "named": true
         },
         {
@@ -3590,6 +3670,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -3697,6 +3781,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "method_reference",
           "named": true
         },
         {
@@ -3828,6 +3916,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -3861,6 +3953,61 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "method_reference",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "dotted_identifier",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "index",
+          "named": true
+        },
+        {
+          "type": "list",
+          "named": true
+        },
+        {
+          "type": "map",
+          "named": true
+        },
+        {
+          "type": "new_object",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -3997,6 +4144,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -4105,6 +4256,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "method_reference",
           "named": true
         },
         {
@@ -4253,6 +4408,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "method_reference",
           "named": true
         },
         {
@@ -4418,6 +4577,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "method_reference",
           "named": true
         },
         {
@@ -4604,6 +4767,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -4694,6 +4861,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -4781,6 +4952,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "method_reference",
             "named": true
           },
           {
@@ -4952,6 +5127,10 @@
             "named": true
           },
           {
+            "type": "method_reference",
+            "named": true
+          },
+          {
             "type": "new_object",
             "named": true
           },
@@ -5069,6 +5248,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "method_reference",
             "named": true
           },
           {
@@ -5194,6 +5377,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "method_reference",
           "named": true
         },
         {
@@ -5357,6 +5544,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "method_reference",
             "named": true
           },
           {
@@ -5595,6 +5786,10 @@
   },
   {
     "type": ":",
+    "named": false
+  },
+  {
+    "type": "::",
     "named": false
   },
   {

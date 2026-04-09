@@ -1,0 +1,17 @@
+==========
+Method reference with ::
+==========
+Objects::nonNull
+---
+(source_file
+  (method_reference
+    (identifier)
+    (identifier)))
+==========
+Constructor reference with ::new
+==========
+ArrayList::new
+---
+(source_file
+  (method_reference
+    (identifier)))
