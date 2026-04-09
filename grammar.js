@@ -41,6 +41,7 @@ module.exports = grammar({
     [$._callable_expression, $.juxt_function_call],
     [$._callable_expression, $._juxt_argument_list],
     [$._juxtable_expression, $._juxt_argument_list],
+    [$._juxtable_expression, $._type_name_expression],
   ],
 
   rules: {
@@ -217,11 +218,11 @@ module.exports = grammar({
       optional(field('generics', $.generic_parameters)),
       optional(seq(
         'extends',
-        field('superclass', $._primary_expression),
+        field('superclass', $._type_name_expression),
       )),
       optional(seq(
         'implements',
-        field('interfaces', list_of($._primary_expression)),
+        field('interfaces', list_of($._type_name_expression)),
       )),
       field('body', $.closure),
     ),
@@ -361,6 +362,12 @@ module.exports = grammar({
       $._callable_expression,
     )),
 
+    _type_name_expression: $ => choice(
+      $._type,
+      $.identifier,
+      $.dotted_identifier,
+    ),
+
     _callable_expression: $ => choice(
       "this",
       $.new_object,
@@ -426,7 +433,10 @@ module.exports = grammar({
 
     function_call: $ => prec.left(2, seq( //higher precedence than juxt_function_call
       field('function', $._callable_expression),
-      field('args', $.argument_list),
+      choice(
+        field('args', $.argument_list),
+        field('trailing_closure', $.closure),
+      ),
     )),
 
     __immediately_invoked_closure: $ => prec.left(2,

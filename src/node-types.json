@@ -936,7 +936,11 @@
             "named": false
           },
           {
-            "type": "boolean_literal",
+            "type": "array_type",
+            "named": true
+          },
+          {
+            "type": "builtintype",
             "named": true
           },
           {
@@ -944,44 +948,12 @@
             "named": true
           },
           {
-            "type": "function_call",
-            "named": true
-          },
-          {
             "type": "identifier",
             "named": true
           },
           {
-            "type": "index",
+            "type": "type_with_generics",
             "named": true
-          },
-          {
-            "type": "list",
-            "named": true
-          },
-          {
-            "type": "map",
-            "named": true
-          },
-          {
-            "type": "new_object",
-            "named": true
-          },
-          {
-            "type": "number_literal",
-            "named": true
-          },
-          {
-            "type": "parenthesized_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "this",
-            "named": false
           }
         ]
       },
@@ -1000,7 +972,11 @@
         "required": false,
         "types": [
           {
-            "type": "boolean_literal",
+            "type": "array_type",
+            "named": true
+          },
+          {
+            "type": "builtintype",
             "named": true
           },
           {
@@ -1008,44 +984,12 @@
             "named": true
           },
           {
-            "type": "function_call",
-            "named": true
-          },
-          {
             "type": "identifier",
             "named": true
           },
           {
-            "type": "index",
+            "type": "type_with_generics",
             "named": true
-          },
-          {
-            "type": "list",
-            "named": true
-          },
-          {
-            "type": "map",
-            "named": true
-          },
-          {
-            "type": "new_object",
-            "named": true
-          },
-          {
-            "type": "number_literal",
-            "named": true
-          },
-          {
-            "type": "parenthesized_expression",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "this",
-            "named": false
           }
         ]
       }
@@ -2513,7 +2457,7 @@
     "fields": {
       "args": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "argument_list",
@@ -2556,6 +2500,16 @@
           {
             "type": "this",
             "named": false
+          }
+        ]
+      },
+      "trailing_closure": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "closure",
+            "named": true
           }
         ]
       }

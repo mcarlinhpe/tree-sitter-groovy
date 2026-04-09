@@ -15,7 +15,7 @@ def plusThree = {it + 3}
         args: (argument_list
           (unary_op
             (number_literal))))))
-  (juxt_function_call
+  (function_call
     function: (dotted_identifier
       (function_call
         function: (dotted_identifier
@@ -32,12 +32,11 @@ def plusThree = {it + 3}
             (string_content))
           (string
             (string_content)))))
-    args: (argument_list
-      (closure
-        (juxt_function_call
-          function: (identifier)
-          args: (argument_list
-            (identifier)))))))
+    trailing_closure: (closure
+      (juxt_function_call
+        function: (identifier)
+        args: (argument_list
+          (identifier))))))
 ==========
 Field access with immediately invoked closure
 ==========
@@ -55,7 +54,7 @@ def plusThree = {it + 3}
         args: (argument_list
           (unary_op
             (number_literal))))))
-  (juxt_function_call
+  (function_call
     function: (dotted_identifier
       (function_call
         function: (dotted_identifier
@@ -73,12 +72,11 @@ def plusThree = {it + 3}
               (string
                 (string_content))))
           args: (argument_list))))
-    args: (argument_list
-      (closure
-        (juxt_function_call
-          function: (identifier)
-          args: (argument_list
-            (identifier)))))))
+    trailing_closure: (closure
+      (juxt_function_call
+        function: (identifier)
+        args: (argument_list
+          (identifier))))))
 ==========
 Quoted field access
 ==========

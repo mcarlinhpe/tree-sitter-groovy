@@ -1,0 +1,29 @@
+==========
+Trailing closure on method via safe navigation
+==========
+list?.findAll { !it.existing }
+---
+(source_file
+  (access_op
+    (identifier)
+    (function_call
+      function: (identifier)
+      trailing_closure: (closure
+        (unary_op
+          (dotted_identifier
+            (identifier)
+            (identifier)))))))
+==========
+Trailing closure on dotted method
+==========
+netInterfaces.max { it.displayOrder }
+---
+(source_file
+  (function_call
+    function: (dotted_identifier
+      (identifier)
+      (identifier))
+    trailing_closure: (closure
+      (dotted_identifier
+        (identifier)
+        (identifier)))))

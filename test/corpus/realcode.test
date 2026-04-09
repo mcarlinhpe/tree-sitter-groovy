@@ -66,72 +66,76 @@ Map<String, Closure> prepareSteps(def steps, def agentMap, def labelPrefix='') {
                       (identifier)
                       (identifier))))
                 value: (closure
-                  (function_call
+                  (juxt_function_call
                     function: (identifier)
                     args: (argument_list
-                      (index
-                        (identifier)
-                        (identifier))
-                      (closure
-                        (function_call
-                          function: (dotted_identifier
+                      (function_call
+                        function: (parenthesized_expression
+                          (index
                             (identifier)
-                            (identifier))
-                          args: (argument_list
-                            (map
-                              (map_item
-                                key: (string
-                                  (string_content))
-                                value: (identifier)))
-                            (closure
-                              (parameter_list
-                                (parameter
-                                  name: (identifier))
-                                (parameter
-                                  type: (type_with_generics
-                                    (identifier)
-                                    (generics
-                                      (type_with_generics
+                            (identifier)))
+                        trailing_closure: (closure
+                          (juxt_function_call
+                            function: (dotted_identifier
+                              (identifier)
+                              (identifier))
+                            args: (argument_list
+                              (function_call
+                                function: (parenthesized_expression
+                                  (map
+                                    (map_item
+                                      key: (string
+                                        (string_content))
+                                      value: (identifier))))
+                                trailing_closure: (closure
+                                  (parameter_list
+                                    (parameter
+                                      name: (identifier))
+                                    (parameter
+                                      type: (type_with_generics
                                         (identifier)
                                         (generics
-                                          (identifier)
-                                          (identifier)))))
-                                  name: (identifier)))
-                              (if_statement
-                                condition: (parenthesized_expression
-                                  (binary_op
-                                    (dotted_identifier
-                                      (identifier)
-                                      (identifier))
-                                    (identifier)))
-                                body: (closure
-                                  (assignment
-                                    (identifier)
-                                    (binary_op
-                                      (function_call
-                                        function: (index
-                                          (identifier)
-                                          (dotted_identifier
+                                          (type_with_generics
                                             (identifier)
-                                            (identifier)))
-                                        args: (argument_list
-                                          (identifier)))
-                                      (identifier))))
-                                else_body: (if_statement
-                                  condition: (parenthesized_expression
-                                    (binary_op
-                                      (identifier)
-                                      (identifier)))
-                                  body: (closure
-                                    (assignment
-                                      (identifier)
+                                            (generics
+                                              (identifier)
+                                              (identifier)))))
+                                      name: (identifier)))
+                                  (if_statement
+                                    condition: (parenthesized_expression
                                       (binary_op
-                                        (function_call
-                                          function: (index
-                                            (identifier)
-                                            (identifier))
-                                          args: (argument_list
-                                            (identifier)))
-                                        (identifier))))))
-                              (return
-                                (identifier)))))))))))))))))
+                                        (dotted_identifier
+                                          (identifier)
+                                          (identifier))
+                                        (identifier)))
+                                    body: (closure
+                                      (assignment
+                                        (identifier)
+                                        (binary_op
+                                          (function_call
+                                            function: (index
+                                              (identifier)
+                                              (dotted_identifier
+                                                (identifier)
+                                                (identifier)))
+                                            args: (argument_list
+                                              (identifier)))
+                                          (identifier))))
+                                    else_body: (if_statement
+                                      condition: (parenthesized_expression
+                                        (binary_op
+                                          (identifier)
+                                          (identifier)))
+                                      body: (closure
+                                        (assignment
+                                          (identifier)
+                                          (binary_op
+                                            (function_call
+                                              function: (index
+                                                (identifier)
+                                                (identifier))
+                                              args: (argument_list
+                                                (identifier)))
+                                            (identifier))))))
+                                  (return
+                                    (identifier)))))))))))))))))))

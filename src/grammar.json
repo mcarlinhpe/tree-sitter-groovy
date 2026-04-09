@@ -1595,7 +1595,7 @@
                   "name": "superclass",
                   "content": {
                     "type": "SYMBOL",
-                    "name": "_primary_expression"
+                    "name": "_type_name_expression"
                   }
                 }
               ]
@@ -1631,7 +1631,7 @@
                             "members": [
                               {
                                 "type": "SYMBOL",
-                                "name": "_primary_expression"
+                                "name": "_type_name_expression"
                               },
                               {
                                 "type": "STRING",
@@ -1646,7 +1646,7 @@
                         "members": [
                           {
                             "type": "SYMBOL",
-                            "name": "_primary_expression"
+                            "name": "_type_name_expression"
                           },
                           {
                             "type": "CHOICE",
@@ -2353,6 +2353,23 @@
         ]
       }
     },
+    "_type_name_expression": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dotted_identifier"
+        }
+      ]
+    },
     "_callable_expression": {
       "type": "CHOICE",
       "members": [
@@ -2681,12 +2698,25 @@
             }
           },
           {
-            "type": "FIELD",
-            "name": "args",
-            "content": {
-              "type": "SYMBOL",
-              "name": "argument_list"
-            }
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "args",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "argument_list"
+                }
+              },
+              {
+                "type": "FIELD",
+                "name": "trailing_closure",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "closure"
+                }
+              }
+            ]
           }
         ]
       }
@@ -4930,6 +4960,10 @@
     [
       "_juxtable_expression",
       "_juxt_argument_list"
+    ],
+    [
+      "_juxtable_expression",
+      "_type_name_expression"
     ]
   ],
   "precedences": [],

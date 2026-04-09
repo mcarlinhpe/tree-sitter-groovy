@@ -54,26 +54,28 @@ steps.add([(Platform.ALL): { def ctx ->
             (parameter_list
               (parameter
                 name: (identifier)))
-            (function_call
+            (juxt_function_call
               function: (identifier)
               args: (argument_list
-                (string
-                  (interpolation
-                    (dotted_identifier
-                      (dotted_identifier
-                        (identifier)
-                        (identifier))
-                      (identifier)))
-                  (string_content))
-                (closure
-                  (juxt_function_call
-                    function: (identifier)
-                    args: (argument_list
-                      (string
-                        (string_content)
-                        (interpolation
+                (function_call
+                  function: (parenthesized_expression
+                    (string
+                      (interpolation
+                        (dotted_identifier
                           (dotted_identifier
+                            (identifier)
+                            (identifier))
+                          (identifier)))
+                      (string_content)))
+                  trailing_closure: (closure
+                    (juxt_function_call
+                      function: (identifier)
+                      args: (argument_list
+                        (string
+                          (string_content)
+                          (interpolation
                             (dotted_identifier
-                              (identifier)
-                              (identifier))
-                            (identifier)))))))))))))))
+                              (dotted_identifier
+                                (identifier)
+                                (identifier))
+                              (identifier))))))))))))))))
