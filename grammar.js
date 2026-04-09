@@ -186,7 +186,6 @@ module.exports = grammar({
           ["!in", PREC.COMPARE],
           ["instanceof", PREC.COMPARE],
           ["!instanceof", PREC.COMPARE],
-          ["as", PREC.COMPARE],
           ["==", PREC.COMPARE_EQ],
           ["!=", PREC.COMPARE_EQ],
           ["<=>", PREC.COMPARE_EQ],
@@ -333,10 +332,17 @@ module.exports = grammar({
       field('body', choice($._expression, $.closure)),
     )),
 
+    as_op: $ => prec.left(PREC.COMPARE, seq(
+      field('value', $._expression),
+      'as',
+      field('type', $._type),
+    )),
+
     _expression: $ => prec(1, choice(
       $._primary_expression,
       $.increment_op,
       $.binary_op,
+      $.as_op,
       $.ternary_op,
       $.unary_op,
       $.access_op,
@@ -785,7 +791,7 @@ module.exports = grammar({
       'synchronized'
     ),
 
-    type_with_generics: $ => prec(2, seq(
+    type_with_generics: $ => prec(3, seq(
       choice($.identifier, $._type_identifier),
       $.generics,
     )),

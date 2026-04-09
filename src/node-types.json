@@ -17,6 +17,10 @@
           "named": true
         },
         {
+          "type": "as_op",
+          "named": true
+        },
+        {
           "type": "binary_op",
           "named": true
         },
@@ -120,6 +124,10 @@
       "types": [
         {
           "type": "access_op",
+          "named": true
+        },
+        {
+          "type": "as_op",
           "named": true
         },
         {
@@ -229,6 +237,124 @@
     }
   },
   {
+    "type": "as_op",
+    "named": true,
+    "fields": {
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_type",
+            "named": true
+          },
+          {
+            "type": "builtintype",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "type_with_generics",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "access_op",
+            "named": true
+          },
+          {
+            "type": "as_op",
+            "named": true
+          },
+          {
+            "type": "binary_op",
+            "named": true
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "closure",
+            "named": true
+          },
+          {
+            "type": "dotted_identifier",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "increment_op",
+            "named": true
+          },
+          {
+            "type": "index",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "list",
+            "named": true
+          },
+          {
+            "type": "map",
+            "named": true
+          },
+          {
+            "type": "new_object",
+            "named": true
+          },
+          {
+            "type": "null",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "ternary_op",
+            "named": true
+          },
+          {
+            "type": "this",
+            "named": false
+          },
+          {
+            "type": "unary_op",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "assertion",
     "named": true,
     "fields": {},
@@ -238,6 +364,10 @@
       "types": [
         {
           "type": "access_op",
+          "named": true
+        },
+        {
+          "type": "as_op",
           "named": true
         },
         {
@@ -328,6 +458,10 @@
           "named": true
         },
         {
+          "type": "as_op",
+          "named": true
+        },
+        {
           "type": "binary_op",
           "named": true
         },
@@ -412,6 +546,10 @@
       "types": [
         {
           "type": "access_op",
+          "named": true
+        },
+        {
+          "type": "as_op",
           "named": true
         },
         {
@@ -512,6 +650,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "binary_op",
             "named": true
           },
@@ -596,6 +738,10 @@
       "types": [
         {
           "type": "access_op",
+          "named": true
+        },
+        {
+          "type": "as_op",
           "named": true
         },
         {
@@ -924,6 +1070,10 @@
           "named": true
         },
         {
+          "type": "as_op",
+          "named": true
+        },
+        {
           "type": "assertion",
           "named": true
         },
@@ -1133,6 +1283,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "binary_op",
             "named": true
           },
@@ -1244,6 +1398,10 @@
           },
           {
             "type": "access_op",
+            "named": true
+          },
+          {
+            "type": "as_op",
             "named": true
           },
           {
@@ -1488,6 +1646,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "assertion",
             "named": true
           },
@@ -1654,6 +1816,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "binary_op",
             "named": true
           },
@@ -1779,6 +1945,10 @@
           },
           {
             "type": "access_op",
+            "named": true
+          },
+          {
+            "type": "as_op",
             "named": true
           },
           {
@@ -1964,6 +2134,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "binary_op",
             "named": true
           },
@@ -2055,6 +2229,10 @@
           },
           {
             "type": "access_op",
+            "named": true
+          },
+          {
+            "type": "as_op",
             "named": true
           },
           {
@@ -2657,6 +2835,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "assertion",
             "named": true
           },
@@ -2834,6 +3016,10 @@
           },
           {
             "type": "access_op",
+            "named": true
+          },
+          {
+            "type": "as_op",
             "named": true
           },
           {
@@ -3060,6 +3246,10 @@
           "named": true
         },
         {
+          "type": "as_op",
+          "named": true
+        },
+        {
           "type": "binary_op",
           "named": true
         },
@@ -3144,6 +3334,10 @@
       "types": [
         {
           "type": "access_op",
+          "named": true
+        },
+        {
+          "type": "as_op",
           "named": true
         },
         {
@@ -3284,6 +3478,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "binary_op",
             "named": true
           },
@@ -3387,6 +3585,10 @@
       "types": [
         {
           "type": "access_op",
+          "named": true
+        },
+        {
+          "type": "as_op",
           "named": true
         },
         {
@@ -3511,6 +3713,10 @@
         "types": [
           {
             "type": "access_op",
+            "named": true
+          },
+          {
+            "type": "as_op",
             "named": true
           },
           {
@@ -3679,6 +3885,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "binary_op",
             "named": true
           },
@@ -3783,6 +3993,10 @@
       "types": [
         {
           "type": "access_op",
+          "named": true
+        },
+        {
+          "type": "as_op",
           "named": true
         },
         {
@@ -3930,6 +4144,10 @@
           "named": true
         },
         {
+          "type": "as_op",
+          "named": true
+        },
+        {
           "type": "binary_op",
           "named": true
         },
@@ -4020,6 +4238,10 @@
       "types": [
         {
           "type": "access_op",
+          "named": true
+        },
+        {
+          "type": "as_op",
           "named": true
         },
         {
@@ -4266,6 +4488,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "binary_op",
             "named": true
           },
@@ -4352,6 +4578,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "binary_op",
             "named": true
           },
@@ -4435,6 +4665,10 @@
         "types": [
           {
             "type": "access_op",
+            "named": true
+          },
+          {
+            "type": "as_op",
             "named": true
           },
           {
@@ -4531,6 +4765,10 @@
           },
           {
             "type": "access_op",
+            "named": true
+          },
+          {
+            "type": "as_op",
             "named": true
           },
           {
@@ -4710,6 +4948,10 @@
             "named": true
           },
           {
+            "type": "as_op",
+            "named": true
+          },
+          {
             "type": "binary_op",
             "named": true
           },
@@ -4835,6 +5077,10 @@
           "named": true
         },
         {
+          "type": "as_op",
+          "named": true
+        },
+        {
           "type": "binary_op",
           "named": true
         },
@@ -4923,6 +5169,10 @@
           },
           {
             "type": "access_op",
+            "named": true
+          },
+          {
+            "type": "as_op",
             "named": true
           },
           {

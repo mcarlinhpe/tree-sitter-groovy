@@ -1,0 +1,24 @@
+==========
+as cast with generic type
+==========
+x = servers as Collection<ComputeServer>
+y = [:] as Map<String, String>
+---
+(source_file
+  (assignment
+    (identifier)
+    (as_op
+      (identifier)
+      (type_with_generics
+        (identifier)
+        (generics
+          (identifier)))))
+  (assignment
+    (identifier)
+    (as_op
+      (map)
+      (type_with_generics
+        (identifier)
+        (generics
+          (identifier)
+          (identifier))))))

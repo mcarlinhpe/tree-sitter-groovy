@@ -1186,27 +1186,6 @@
         },
         {
           "type": "PREC_LEFT",
-          "value": 10,
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_expression"
-              },
-              {
-                "type": "STRING",
-                "value": "as"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_expression"
-              }
-            ]
-          }
-        },
-        {
-          "type": "PREC_LEFT",
           "value": 9,
           "content": {
             "type": "SEQ",
@@ -2250,6 +2229,35 @@
         ]
       }
     },
+    "as_op": {
+      "type": "PREC_LEFT",
+      "value": 10,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "FIELD",
+            "name": "value",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_expression"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "as"
+          },
+          {
+            "type": "FIELD",
+            "name": "type",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_type"
+            }
+          }
+        ]
+      }
+    },
     "_expression": {
       "type": "PREC",
       "value": 1,
@@ -2267,6 +2275,10 @@
           {
             "type": "SYMBOL",
             "name": "binary_op"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "as_op"
           },
           {
             "type": "SYMBOL",
@@ -4572,7 +4584,7 @@
     },
     "type_with_generics": {
       "type": "PREC",
-      "value": 2,
+      "value": 3,
       "content": {
         "type": "SEQ",
         "members": [
