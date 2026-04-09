@@ -347,7 +347,6 @@ module.exports = grammar({
       $.ternary_op,
       $.unary_op,
       $.access_op,
-      $.new_object,
       $.lambda_expression,
       $.closure,
       alias("null", $.null),
@@ -364,6 +363,7 @@ module.exports = grammar({
 
     _callable_expression: $ => choice(
       "this",
+      $.new_object,
       $.function_call,
       $.parenthesized_expression,
       $._juxtable_expression,

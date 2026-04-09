@@ -964,6 +964,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "number_literal",
             "named": true
           },
@@ -1021,6 +1025,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "new_object",
             "named": true
           },
           {
@@ -1678,6 +1686,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "new_object",
           "named": true
         },
         {
@@ -2534,6 +2546,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "parenthesized_expression",
             "named": true
           },
@@ -3306,6 +3322,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "new_object",
           "named": true
         },
         {

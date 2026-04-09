@@ -28,3 +28,21 @@ x = new ServiceResponse<>(true, null)
       (argument_list
         (boolean_literal)
         (null)))))
+
+==========
+method chaining after new
+==========
+x = new Foo().bar("a")
+---
+(source_file
+  (assignment
+    (identifier)
+    (function_call
+      (dotted_identifier
+        (new_object
+          (identifier)
+          (argument_list))
+        (identifier))
+      (argument_list
+        (string
+          (string_content))))))

@@ -2302,10 +2302,6 @@
           },
           {
             "type": "SYMBOL",
-            "name": "new_object"
-          },
-          {
-            "type": "SYMBOL",
             "name": "lambda_expression"
           },
           {
@@ -2363,6 +2359,10 @@
         {
           "type": "STRING",
           "value": "this"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "new_object"
         },
         {
           "type": "SYMBOL",
