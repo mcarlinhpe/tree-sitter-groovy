@@ -18,7 +18,7 @@ x = ~5 ** y
         (number_literal))
       (identifier))))
 ==========
-The `new` keyword, TODO: remove from unary ops
+The `new` keyword as new_object
 ==========
 import utils.SoftwareMutex
 SoftwareMutex manifestAppendLock = new SoftwareMutex()
@@ -36,10 +36,9 @@ steps.add([(Platform.ALL): { def ctx ->
   (declaration
     type: (identifier)
     name: (identifier)
-    value: (unary_op
-      (function_call
-        function: (identifier)
-        args: (argument_list))))
+    value: (new_object
+      (identifier)
+      (argument_list)))
   (function_call
     function: (dotted_identifier
       (identifier)

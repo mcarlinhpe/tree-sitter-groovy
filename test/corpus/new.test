@@ -1,0 +1,30 @@
+==========
+new with generics
+==========
+x = new ServiceResponse<PrepareWorkloadResponse>(true, "ok")
+---
+(source_file
+  (assignment
+    (identifier)
+    (new_object
+      (identifier)
+      (generics
+        (identifier))
+      (argument_list
+        (boolean_literal)
+        (string
+          (string_content))))))
+==========
+new with diamond operator
+==========
+x = new ServiceResponse<>(true, null)
+---
+(source_file
+  (assignment
+    (identifier)
+    (new_object
+      (identifier)
+      (generics)
+      (argument_list
+        (boolean_literal)
+        (null)))))

@@ -57,6 +57,10 @@
           "named": true
         },
         {
+          "type": "new_object",
+          "named": true
+        },
+        {
           "type": "null",
           "named": true
         },
@@ -156,6 +160,10 @@
         },
         {
           "type": "map_item",
+          "named": true
+        },
+        {
+          "type": "new_object",
           "named": true
         },
         {
@@ -265,6 +273,10 @@
           "named": true
         },
         {
+          "type": "new_object",
+          "named": true
+        },
+        {
           "type": "null",
           "named": true
         },
@@ -344,6 +356,10 @@
           "named": true
         },
         {
+          "type": "new_object",
+          "named": true
+        },
+        {
           "type": "null",
           "named": true
         },
@@ -420,6 +436,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "new_object",
           "named": true
         },
         {
@@ -509,6 +529,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "new_object",
             "named": true
           },
           {
@@ -655,6 +679,10 @@
           "named": true
         },
         {
+          "type": "new_object",
+          "named": true
+        },
+        {
           "type": "null",
           "named": true
         },
@@ -718,6 +746,60 @@
           {
             "type": "generic_parameters",
             "named": true
+          }
+        ]
+      },
+      "interfaces": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "boolean_literal",
+            "named": true
+          },
+          {
+            "type": "dotted_identifier",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "index",
+            "named": true
+          },
+          {
+            "type": "list",
+            "named": true
+          },
+          {
+            "type": "map",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "this",
+            "named": false
           }
         ]
       },
@@ -918,6 +1000,10 @@
           "named": true
         },
         {
+          "type": "new_object",
+          "named": true
+        },
+        {
           "type": "null",
           "named": true
         },
@@ -1052,6 +1138,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "new_object",
             "named": true
           },
           {
@@ -1222,6 +1312,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "new_object",
             "named": true
           },
           {
@@ -1458,6 +1552,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "null",
             "named": true
           },
@@ -1552,6 +1650,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "null",
             "named": true
           },
@@ -1591,6 +1693,28 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "array_type",
+          "named": true
+        },
+        {
+          "type": "builtintype",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "type_with_generics",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1714,6 +1838,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "null",
             "named": true
           },
@@ -1821,6 +1949,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "new_object",
             "named": true
           },
           {
@@ -1971,6 +2103,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "new_object",
             "named": true
           },
           {
@@ -2306,7 +2442,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "array_type",
@@ -2565,6 +2701,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "null",
             "named": true
           },
@@ -2737,6 +2877,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "null",
             "named": true
           },
@@ -2888,6 +3032,10 @@
           "named": true
         },
         {
+          "type": "new_object",
+          "named": true
+        },
+        {
           "type": "null",
           "named": true
         },
@@ -2964,6 +3112,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "new_object",
           "named": true
         },
         {
@@ -3096,6 +3248,10 @@
           "named": true
         },
         {
+          "type": "new_object",
+          "named": true
+        },
+        {
           "type": "null",
           "named": true
         },
@@ -3212,6 +3368,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "null",
             "named": true
           },
@@ -3247,6 +3407,33 @@
     "type": "modifier",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "new_object",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "argument_list",
+          "named": true
+        },
+        {
+          "type": "closure",
+          "named": true
+        },
+        {
+          "type": "generics",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "number_literal",
@@ -3339,6 +3526,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "new_object",
             "named": true
           },
           {
@@ -3438,6 +3629,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "new_object",
           "named": true
         },
         {
@@ -3574,6 +3769,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "new_object",
           "named": true
         },
         {
@@ -3723,6 +3922,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "new_object",
           "named": true
         },
         {
@@ -3897,6 +4100,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "null",
             "named": true
           },
@@ -3975,6 +4182,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "null",
             "named": true
           },
@@ -4050,6 +4261,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "new_object",
             "named": true
           },
           {
@@ -4205,6 +4420,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "null",
             "named": true
           },
@@ -4313,6 +4532,10 @@
             "named": true
           },
           {
+            "type": "new_object",
+            "named": true
+          },
+          {
             "type": "null",
             "named": true
           },
@@ -4363,23 +4586,11 @@
       "required": true,
       "types": [
         {
-          "type": "array_type",
-          "named": true
-        },
-        {
-          "type": "builtintype",
-          "named": true
-        },
-        {
           "type": "generics",
           "named": true
         },
         {
           "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "type_with_generics",
           "named": true
         }
       ]
@@ -4435,6 +4646,10 @@
         },
         {
           "type": "map",
+          "named": true
+        },
+        {
+          "type": "new_object",
           "named": true
         },
         {
@@ -4582,6 +4797,10 @@
           },
           {
             "type": "map",
+            "named": true
+          },
+          {
+            "type": "new_object",
             "named": true
           },
           {
@@ -5052,6 +5271,10 @@
   },
   {
     "type": "if",
+    "named": false
+  },
+  {
+    "type": "implements",
     "named": false
   },
   {

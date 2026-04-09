@@ -331,6 +331,7 @@ module.exports = grammar({
       $.ternary_op,
       $.unary_op,
       $.access_op,
+      $.new_object,
       $.closure,
       alias("null", $.null),
     )),
@@ -774,13 +775,20 @@ module.exports = grammar({
       'synchronized'
     ),
 
-    //TODO diamond operator
     type_with_generics: $ => prec(2, seq(
       choice($.identifier, $._type_identifier),
       $.generics,
     )),
 
-    generics: $ => seq('<', list_of($._type), '>'),
+    generics: $ => seq('<', optional(list_of($._type)), '>'),
+
+    new_object: $ => prec.right(PREC.TOP, seq(
+      'new',
+      choice($.identifier, $._type_identifier),
+      optional($.generics),
+      $.argument_list,
+      optional($.closure),
+    )),
 
     unary_op: $ =>
       choice(
@@ -789,7 +797,6 @@ module.exports = grammar({
           ["-", PREC.UNARY],
           ["~", PREC.TOP],
           ["!", PREC.TOP],
-          ["new", PREC.TOP],
         ].map(([operator, precedence]) =>
           prec.left(precedence, seq(operator, $._expression))
         ),
